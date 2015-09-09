@@ -1,0 +1,15 @@
+{
+  "name": "TuristShareApp",
+  "version": "0.0.0",
+  "description": "Web Service for Turist Share App",
+  "main": "server.js",
+  "repository": "",
+  "author": "Carlos Fernandez Jimenez",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~3.2.4"
+  },
+  "devDependencies": {
+    "mongoose": "^4.1.5"
+  }
+}
