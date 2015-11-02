@@ -35,13 +35,12 @@ app.configure('production', function(){
 });
 
 //routes
-
+app.use('/', express.static(__dirname + '/presentation/views'));
 //send the main page 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/presentation/views/index.html');
 });
 
-app.use('/', express.static(__dirname + '/presentation/views'));
 /*
  *method:post
  *inputs:name, lastname, username, phoneNumber, facebookId, email, userType
