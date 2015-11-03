@@ -29,6 +29,9 @@
                 });
             $routeProvider
                 .when('/',{
+                    templateUrl: 'views/home.html'
+                })
+                .when('/login',{
                     templateUrl: 'views/login.html'
                 })
                 .when('/rooms',{
