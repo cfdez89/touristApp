@@ -1,13 +1,12 @@
+# Tourist application
 
-Bakend for tourist share app
-Welcome to your Node.js project on Cloud9 IDE!
+Application for the Project management course.
 
-## Running the server
+Running the webpack server
 
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
+1) Launch the app from the Terminal:
 
-2) Alternatively you can launch the app from the Terminal:
+    $ node server
 
-    $ node server.js
+2) Once the webpack server is running, open the project in the shape of : 'http://localhost:3000'
 
-Once the server is running, open the project in the shape of 'https://turist-share-app-cfdez89.c9.io/'
