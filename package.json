@@ -1,7 +1,7 @@
 {
-  "name": "TuristShareApp",
+  "name": "touristApp",
   "version": "0.0.0",
-  "description": "Web Service for Turist Share App",
+  "description": "Web page for  the Tourist App",
   "main": "server.js",
   "repository": "",
   "author": "Carlos Fernandez Jimenez",
