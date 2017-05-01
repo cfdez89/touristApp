@@ -1,7 +1,7 @@
 {
   "name": "touristApp",
   "version": "0.0.0",
-  "description": "Web page for  the Tourist App",
+  "description": "Web page for the Tourist App",
   "main": "server.js",
   "repository": "",
   "author": "Carlos Fernandez Jimenez",
