@@ -1,6 +1,6 @@
 # Tourist Web page application
 
-Application for the Project management course.
+Application for the Project management course, using MEAN stack.
 
 Running the server
 
