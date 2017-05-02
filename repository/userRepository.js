@@ -35,3 +35,17 @@ exports.createUser = function(data, callback){
   		}
   	}); 
 };
+
+exports.getUserById = function(data, callback){
+    User.findOne({
+        _id:data.id
+    }, function(err, result){
+        if(err){
+  	        console.log('ERROR: ' + err);
+  	        callback(false, null, 500);
+  		} 
+  		else{
+  		    callback(true, result, 200);
+  		}
+  	});
+};

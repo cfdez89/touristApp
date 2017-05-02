@@ -16,11 +16,19 @@ var userRepository = require('../repository/userRepository.js'),
     respObject     = require('../shared/response.js');
 
 function getUser(request, response) {
-    var data = {message:"hola"};
-     
+    userRepository.getUserById({
+        id:request.params.id
+    }, function(success, data, code) {
+        if(success) { 
+            response.status(code);
+            response.send(respObject.set(true, 'Success ', data)); 
+        }
+        else {
+            response.status(code);
+            response.send(respObject.set(false, 'Signup failed !', {}));
+        }
+    }); 
 
-    response.status(200);
-    response.send(data);
 };
 
 function signUp(request, response) {
@@ -38,7 +46,7 @@ function signUp(request, response) {
             var user = {id: data._id, username: data.username};
             response.status(code);
             response.send(respObject.set(true, 'Welcome '+user.username+'!', authService.newToken(user))); 
-		}
+        }
         else {
             response.status(code);
             response.send(respObject.set(false, 'Signup failed !', {}));
