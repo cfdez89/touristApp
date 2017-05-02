@@ -1,0 +1,14 @@
+{  
+	"title": "Configuration file",
+	"description": "Environment variables",
+	"db": {
+		"host": "mongodb://localhost:32768",
+		"port": 27017,
+		"user": "",
+		"password": "",
+		"database": "test"
+	},
+	"security": {
+		"secret_word": "SECRET"
+	}   
+}

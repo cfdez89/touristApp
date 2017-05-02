@@ -1,5 +1,5 @@
 {
-  "name": "touristApp",
+  "name": "TouristApp",
   "version": "0.0.0",
   "description": "Web page for the Tourist App",
   "main": "server.js",
