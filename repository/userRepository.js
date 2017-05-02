@@ -41,7 +41,6 @@ exports.getUserById = function(data, callback){
         _id:data.id
     }, function(err, result){
         if(err){
-  	        console.log('ERROR: ' + err);
   	        callback(false, null, 500);
   		} 
   		else{

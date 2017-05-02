@@ -20,12 +20,18 @@ function getUser(request, response) {
         id:request.params.id
     }, function(success, data, code) {
         if(success) { 
-            response.status(code);
-            response.send(respObject.set(true, 'Success ', data)); 
+            if(data) {
+                response.status(code);
+                response.send(respObject.set(true, 'Success ', data)); 
+            }
+            else {
+                response.status(code);
+                response.send(respObject.set(false, 'Not found !', {}));
+            }   
         }
         else {
             response.status(code);
-            response.send(respObject.set(false, 'Signup failed !', {}));
+            response.send(respObject.set(false, 'Failed !', {}));
         }
     }); 
 
@@ -43,9 +49,15 @@ function signUp(request, response) {
         userType:request.body.userType
     }, function(success, data, code) {
         if(success) { 
-            var user = {id: data._id, username: data.username};
-            response.status(code);
-            response.send(respObject.set(true, 'Welcome '+user.username+'!', authService.newToken(user))); 
+            if(data) {
+                 var user = {id: data._id, username: data.username};
+                 response.status(code);
+                 response.send(respObject.set(true, 'Welcome '+user.username+'!', authService.newToken(user))); 
+            }
+            else {
+                response.status(code);
+                response.send(respObject.set(false, 'Signup failed !', {}));
+            } 
         }
         else {
             response.status(code);
