@@ -24,7 +24,6 @@ function getUser(request, response) {
 };
 
 function signUp(request, response) {
-    var password = request.body.password;
     userRepository.createUser({
         name:request.body.name,
         lastName:request.body.lastName,
@@ -37,13 +36,13 @@ function signUp(request, response) {
     }, function(success, data, code) {
         if(success) { 
             var user = {id: data._id, username: data.username};
-			response.status(code);
-			response.send(respObject.set(true, 'Welcome '+user.username+'!', authService.newToken(user))); 
-		} 
-		else {
             response.status(code);
-		    response.send(respObject.set(false, 'Signup failed !', {}));
+            response.send(respObject.set(true, 'Welcome '+user.username+'!', authService.newToken(user))); 
 		}
+        else {
+            response.status(code);
+            response.send(respObject.set(false, 'Signup failed !', {}));
+        }
     });
 };
 
